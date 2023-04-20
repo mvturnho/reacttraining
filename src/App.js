@@ -9,6 +9,7 @@ function App() {
   );
 }
 
+// comments
 function handleFile(event) {
   const newFile = event.target.files[0];
   if (!newFile) {

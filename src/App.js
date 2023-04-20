@@ -9,7 +9,7 @@ function App() {
   );
 }
 
-// comments
+// comments met meer text
 function handleFile(event) {
   const newFile = event.target.files[0];
   if (!newFile) {

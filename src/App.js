@@ -1,27 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Container, FormGroup, FormControl } from 'react-bootstrap';
+import {  FormControl } from 'react-bootstrap';
+
+import React, { useState } from "react";
 
 function App() {
+  const [waarde,setWaarde]=useState(1);
+  const [factor,setFactor]=useState(1);
   return (
-    <div>
-      <FormControl className="m-4 fullwidth" type="file" onChange={handleFile} />
+    <div className='flex'>
+      <FormControl className="m-4" type="number" onChange={(e) => {setWaarde(e.target.value)}} />
+      <FormControl className="m-4" type="number" onChange={(e) => {setFactor(e.target.value)}} />
+      <div>
+        Waarde is : <h1>{waarde * factor}</h1>
+      </div>
     </div>
   );
 }
 
-// comments met meer text
-function handleFile(event) {
-  const newFile = event.target.files[0];
-  if (!newFile) {
-    return;
-  }
-  var reader = new FileReader();
-  reader.onload = function (e) {
-    // var content = e.target.result;
-    console.log(e.target.result);
-  }
-
-  reader.readAsText(newFile, 'utf-8');
-}
 
 export default App;

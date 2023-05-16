@@ -6,12 +6,16 @@
 .makered {
   color: red;
   font-style: italic;
-  border-width:4px;
+  /* border-width:4px;
   border-style:solid;
-  border-color:red;
+  border-color:red; */
+  font-weight: 900;
+  font-size: x-large;
 }
 
 .makegreen{
   color: green;
-
+  font-style: normal;
+  font-weight: 500;
+  font-size: x-large;
 }
